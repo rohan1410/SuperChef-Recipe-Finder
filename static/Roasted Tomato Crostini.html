@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    	<link rel="stylesheet" href="css/bootstrap.css">
+    	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<style>
+body {
+    font-size: 93%;
+
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 4px;
+    font-size:18px;
+
+}
+
+
+th {
+    background-color: #4CAF50;
+    color:white;
+}
+</style>
+<style type="text/css" media="screen">
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+        }
+        .movie-tile:hover {
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+<body background="pizza.jpg">
+<!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+<div style="width:60%;height:100%;margin-top:0vh;margin-left:20%;background-color:rgba(242, 242, 242,0.8)">
+<h1 style="font-family:Times New Roman;font-size:34px;text-align:center;background-color:#1a1a1a;color:white">
+Roasted Tomato Crostini</h1>
+<img src="images/Roasted Tomato Crostini.jpg" style="padding-left:30%;width:70%">
+<table>
+<tr height="10px"></tr>
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px">Ingredients</th></tr>
+
+<tr><td>•   2 cups small grape tomatoes</td></tr>
+<tr><td>•   2 Tbs. olive oil, divided</td></tr>
+<tr><td>•   18 3/8-inch-thick sourdough baguette slices</td></tr>
+<tr><td>•   3½ tsp. white balsamic vinegar, divided</td></tr>
+<tr><td>•   1 pinch cayenne pepper</td></tr>
+<tr><td>•   1 15-oz. can cannellini beans, drained</td></tr>
+<tr><td>•   1 large clove garlic, finely chopped</td></tr>
+<tr><td>•   1½ tsp. minced fresh rosemary, divided</td></tr>
+<tr><td>•   ½ tsp. salt</td></tr>
+<tr><td>•   ½ tsp. freshly ground black pepper</td></tr>
+
+
+
+
+
+
+
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px">Method</th>
+</tr>
+<tr><td>1. Place oven rack in top position, and preheat oven to 450°F. Coat small rimmed baking sheet with cooking spray. Toss tomatoes and 1 Tbs. oil in medium bowl. Spread tomatoes on prepared baking sheet, and roast 12 minutes. Stir, then roast 3 to 4 minutes more, or until most tomatoes are slightly shriveled and some are scorched. Scrape back into bowl; cool.</td></tr>
+<tr><td>2. Lightly coat bread slices on both sides with cooking spray. Arrange slices on large baking sheet. Bake 6 minutes, or until slightly browned on bottom and beginning to crisp. Cool on baking sheet.</td></tr>
+<tr><td>3. Toss tomatoes with 1 1/2 tsp. vinegar, and season with cayenne and salt and pepper, if desired.</td></tr>
+<tr><td>4. Place 2/3 cup beans in large pie plate. Heat remaining 1 Tbs. oil in small nonstick skillet over medium heat. Add garlic and  1 tsp. rosemary, and stir 30 to 40 seconds, or until very fragrant, but not brown. Scrape oil mixture over beans in dish. Mash to coarse paste (some beans may still be whole) with large fork. Mix remaining 2 tsp. vinegar, salt, and pepper, 1/4 cup basil, and remaining beans into paste. Set aside 1 tomato for each crostini, and stir remaining tomatoes into beans.</td></tr>
+<tr><td>5. To assemble crostini, mound bean mixture on toast slices. Combine remaining 1/2 tsp. rosemary and 2 Tbs. basil in small bowl, and sprinkle lightly over bean mixture. Top each with 1 tomato.</td></tr>
+
+
+
+                                                                                                                             <!-- Paste youtube id over here-->
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px"><div class="movie-tile" data-trailer-youtube-id="Twx-zbFDlFo" data-toggle="modal" data-target="#trailer">Watch Video</div></th></tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    	<link rel="stylesheet" href="css/bootstrap.css">
+    	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<style>
+body {
+    font-size: 93%;
+
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 4px;
+    font-size:18px;
+
+}
+
+
+th {
+    background-color: #4CAF50;
+    color:white;
+}
+</style>
+<style type="text/css" media="screen">
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+        }
+        .movie-tile:hover {
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+<body background="pizza.jpg">
+<!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+<div style="width:60%;height:100%;margin-top:0vh;margin-left:20%;background-color:rgba(242, 242, 242,0.8)">
+<h1 style="font-family:Times New Roman;font-size:34px;text-align:center;background-color:#1a1a1a;color:white">Real Vegetarian Pad Thai </h1>
+<img src="images/RealVegetarianPadThai.jpg" style="padding-left:30%;width:70%">
+<table>
+<tr height="10px"></tr>
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px">Ingredients</th></tr>
+<tr><td>•   8 oz rice </td></tr>
+<tr><td>•   4 cloves garlic</td></tr>
+<tr><td>•   3 Tbsp. diced onion</td></tr>
+<tr><td>•   2-3 cups bean</td></tr>
+<tr><td>•   2 sliced green onions</td></tr>
+<tr><td>•   1/3 cup fresh coriander</td></tr>
+<tr><td>•   3/4 Tbsp. tamarind paste </td></tr>
+<tr><td>•   1/4 cup vegetable</td></tr>
+<tr><td>•   3+1/2 Tbsp. soy sauce </td></tr>
+<tr><td>•   1/2 to 1 tsp. chili sauce </td></tr>
+<tr><td>•   3 Tbsp. brown sugar </td></tr>
+<tr><td>•   freshly-ground black pepper</td></tr>
+
+
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px">Method</th>
+</tr>
+<tr><td>1.  Bring a pot of water to boil over high heat. Dunk in rice and stir with a fork to separate. Cook 4-6 minutes, just until noodles are limp but still too firm to eat (a little firmer than al dente). Drain and rinse with cold water. Tip: Rice should be slightly under-cooked at this stage in order to come out right when they are stir-fried.</td></tr>
+<tr><td>2.  Combine 'pad Thai sauce' ingredients in a cup, stirring well to dissolve sugar and tamarind. Note that this sauce should have a very STRONG-tasting flavor: sour-sweet first, followed by salty and spicy. Set aside.</td></tr>
+
+
+
+
+                                                                                                                             <!-- Paste youtube id over here-->
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px"><div class="movie-tile" data-trailer-youtube-id="YCVv3piJyyM" data-toggle="modal" data-target="#trailer">Watch Video</div></th></tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    	<link rel="stylesheet" href="css/bootstrap.css">
+    	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<style>
+body {
+    font-size: 93%;
+
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 4px;
+    font-size:18px;
+
+}
+
+
+th {
+    background-color: #4CAF50;
+    color:white;
+}
+</style>
+<style type="text/css" media="screen">
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+        }
+        .movie-tile:hover {
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+<body background="pizza.jpg">
+<!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+<div style="width:60%;height:100%;margin-top:0vh;margin-left:20%;background-color:rgba(242, 242, 242,0.8)">
+<h1 style="font-family:Times New Roman;font-size:34px;text-align:center;background-color:#1a1a1a;color:white">
+Spring roll</h1>
+<img src="images/Spring roll.jpg" style="padding-left:30%;width:70%">
+<table>
+<tr height="10px"></tr>
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px">Ingredients</th></tr>
+
+<tr><td>•   2 tbsp oil</td></tr>
+<tr><td>•   150 grams cabbage </td></tr>
+<tr><td>•   80 grams carrot </td></tr>
+<tr><td>•   1 small capsicum,</td></tr>
+<tr><td>•   ¼ cup beans</td></tr>
+<tr><td>•   ⅓ cup spring onions </td></tr>
+<tr><td>•   ½ tsp crushed black pepper</td></tr>
+<tr><td>•   1 tbsp soy sauce</td></tr>
+<tr><td>•   1 tsp finely chopped celery</td></tr>
+<tr><td>•   1 cup cooked noodles,</td></tr>
+<tr><td>•   6 tbsp flour </td></tr>
+<tr><td>•   5 tbsp water </td></tr>
+
+
+
+
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px">Method</th>
+</tr>
+<tr><td>1.To make the stuffing, heat 2 tbsps oil in a non stick wok. Add onion, spring onions, carrots, capsicum, cabbage and salt and toss.</td></tr>
+<tr><td>2.Add pepper powder and soy sauce and mix. Add bean sprouts and spring onion greens and mix. Cook till the vegetables soften.</td></tr>
+<tr><td>3.Take the wok off the heat and set aside to cool. Heat sufficient oil in a wok. Make a paste of cornflour with 2 tbsps water.</td></tr>
+<tr><td>4.Spread the spring roll wrappers on the work top. Divide the stuffing into 10 portions and place a portion on one side of each wrapper. Fold in the edges and roll tightly.</td></tr>
+<tr><td>5.Apply cornflour paste to open end and seal. Keep the rolls under a damp cloth. Gently slide into the hot oil and deep fry till golden and crisp.</td></tr>
+<tr><td>6.Drain on absorbent paper. Cut into smaller pieces and serve.</td></tr>
+
+
+
+
+
+
+
+
+
+
+                                                                                                                             <!-- Paste youtube id over here-->
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px"><div class="movie-tile" data-trailer-youtube-id="WN3STcY1c7w" data-toggle="modal" data-target="#trailer">Watch Video</div></th></tr>
+</table>
+</div>
+</body>
+</html>

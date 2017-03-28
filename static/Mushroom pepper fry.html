@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    	<link rel="stylesheet" href="css/bootstrap.css">
+    	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<style>
+body {
+    font-size: 93%;
+
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 4px;
+    font-size:18px;
+
+}
+
+
+th {
+    background-color: #4CAF50;
+    color:white;
+}
+</style>
+<style type="text/css" media="screen">
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+        }
+        .movie-tile:hover {
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+<body background="pizza.jpg">
+<!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+<div style="width:60%;height:100%;margin-top:0vh;margin-left:20%;background-color:rgba(242, 242, 242,0.8)">
+<h1 style="font-family:Times New Roman;font-size:34px;text-align:center;background-color:#1a1a1a;color:white">Mushroom pepper fry</h1>
+<img src="images/Mushroom pepper fry.jpg" style="padding-left:30%;width:70%">
+<table>
+<tr height="10px"></tr>
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px">Ingredients</th></tr>
+<tr><td>•   2 tablespoon coconut oil </td></tr>
+<tr><td>•   ½ teaspoon mustard seeds</td></tr>
+<tr><td>•   92 grams onion</td></tr>
+<tr><td>•   ½ sliced garlic </td></tr>
+<tr><td>•   200 grams mushroom</td></tr>
+<tr><td>•   115 grams capsicum </td></tr>
+<tr><td>•   1 green chili</td></tr>
+<tr><td>•   9 to 10 curry leaves (chopped)</td></tr> 
+<tr><td>•   1 tablespoon black pepper </td></tr>
+<tr><td>•   1 teaspoon coriander powder</td></tr>
+<tr><td>•   ½ teaspoon cumin powder</td></tr>
+<tr><td>•   a pinch of turmeric powder</td></tr>
+<tr><td>•   2 tablespoons chopped coriander leaves</td></tr>
+
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px">Method</th>
+</tr>
+
+
+<tr><td>1.  heat 2 tablespoons coconut oil in a pan.</td></tr>
+<tr><td>2.  add ½ teaspoon mustard seeds and let them crackle.</td></tr>
+<tr><td>3.  after the mustard seeds crackle, then add 1 cup thinly sliced onions.</td></tr>
+<tr><td>4.  mix the onions very well and saute on a low to medium flame, till they start to turn light golden.</td></tr>
+<tr><td>5.  then add ½ teaspoon ginger-garlic paste and saute till the raw aroma of ginger-garlic goes away.</td></tr>
+<tr><td>6.  now add the sliced mushrooms.</td></tr>
+<tr><td>7.  mix very well and saute them on a medium flame.</td></tr>
+<tr><td>8.  first the mushrooms will release a lot of water.</td></tr>
+<tr><td>9.  continue to saute till all the water has evaporated and the mushrooms are almost cooked.</td></tr>
+<tr><td>10. then add 1 cup sliced bell peppers and mix well.</td></tr>
+<tr><td>11. saute the capsicum slices till they are half cooked. they should have some crunch in them.</td></tr>
+<tr><td>12. then add 1 green chili, sliced or chopped and 2 teaspoons chopped curry leaves and mix well.</td></tr>
+<tr><td>13. now add the coarsely powdered black pepper and fennel seeds along with ½ teaspoon coriander powder, ½ teaspoon cumin powder and a pinch of turmeric powder.</td></tr>
+<tr><td>14. mix all the spices very well with the mushroom and capsicum mixture.</td></tr>
+<tr><td>15. season with salt.</td></tr>
+<tr><td>16. mix again and then switch off the flame. check the taste and add more salt if required.</td></tr>
+<tr><td>17. add 2 tablespoons chopped coriander leaves. stir.</td></tr>
+<tr><td>18. serve mushroom pepper fry hot with chapatis or rotis</td></tr>
+                                                                                                                             <!-- Paste youtube id over here-->
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px"><div class="movie-tile" data-trailer-youtube-id="x6C4zYTJV6c" data-toggle="modal" data-target="#trailer">Watch Video</div></th></tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    	<link rel="stylesheet" href="css/bootstrap.css">
+    	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<style>
+body {
+    font-size: 93%;
+
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 4px;
+    font-size:18px;
+
+}
+
+
+th {
+    background-color: #4CAF50;
+    color:white;
+}
+</style>
+<style type="text/css" media="screen">
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+        }
+        .movie-tile:hover {
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+<body background="pizza.jpg">
+<!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+<div style="width:60%;height:100%;margin-top:0vh;margin-left:20%;background-color:rgba(242, 242, 242,0.8)">
+<h1 style="font-family:Times New Roman;font-size:34px;text-align:center;background-color:#1a1a1a;color:white">Samosa</h1>
+<img src="images/Samosa.jpg" style="padding-left:30%;width:70%">
+<table>
+<tr height="10px"></tr>
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px">Ingredients</th></tr>
+<tr><td>•   1½ cups flour</td></tr>
+<tr><td>•   2 tablespoons oil</td></tr>
+<tr><td>•   ¼ teaspoon ajwain</td></tr>
+<tr><td>•   2 large potatoes</td></tr>
+<tr><td>•   ½ cup fresh green peas</td></tr>
+<tr><td>•   1 long green chilli</td></tr>
+<tr><td>•   ½  ginger piece</td></tr>
+<tr><td>•   ½ teaspoon garam masala</td></tr>
+<tr><td>•   ½ teaspoon coriander powder</td></tr>
+<tr><td>•   ¼ teaspoon turmeric powder</td></tr>
+<tr><td>•   ⅛ teaspoon amchur</td></tr>
+<tr><td>•   ½ teaspoons cumin seeds</td></tr>
+<tr><td>•   2 teaspoons oil</td></tr>
+<tr><td>•   Oil for deep frying samosa.</td></tr>
+
+
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px">Method</th>
+</tr>
+
+
+<tr><td>1.  To make dough:</td></tr>
+<tr><td>2.  Take all the ingredients in a mixing bowl. Mix well till crumbs are formed.</td></tr>
+<tr><td>4.  Keep it aside for 30 minutes.</td></tr>
+<tr><td>5.  To make potato filling:</td></tr>
+<tr><td>6.  Pressure or steam cook potatoes and peas until soft. Peel and coarsely mash the potatoes.</td></tr>
+<tr><td>7.  Crush the ginger-chilli.</td></tr>
+<tr><td>8.  Heat 2 teaspoons oil in a kadai.</td></tr>
+<tr><td>9.  Add cumin seeds and let it crackle.</td></tr>
+<tr><td>10. Add crushed green chilli-ginger and saute well.</td></tr>
+<tr><td>11. Add potato-peas and saute well.</td></tr>
+<tr><td>12. Add salt, turmeric, coriander and garam masala powder. Mix well and saute for 5 minutes.</td></tr>
+<tr><td>13. Add amchur powder and chopped cilantro. Mix well and remove to a bowl.</td></tr>
+<tr><td>14. To make samosa:</td></tr>
+<tr><td>15. Take the kneaded dough and divide into 4 equal portions.</td></tr>
+<tr><td>16. Take one portion and place on a dusted working surface. Roll it into a circle.</td></tr>
+<tr><td>17. Make cut in the middle of the circle to get 2 semi circles. Apply some water over the edges.</td></tr>
+<tr><td>18. Take one semi circle and join the edges to make a cone.</td></tr>
+<tr><td>19. Stuff 2-3 teaspoons of prepared filling in the cone and seal the edges.</td></tr>
+<tr><td>20. Heat oil for deep frying. Slide 2-3 prepared cones in the hot oil and deep fry until golden brown from both sides.</td></tr>
+<tr><td>21. Drain excess oil and serve samosa hot</td></tr>
+
+                                                                                                                             <!-- Paste youtube id over here-->
+<tr><th colspan=3 style="background-color:#1a1a1a;font-family:Times New Roman;text-align:center;font-size:28px"><div class="movie-tile" data-trailer-youtube-id="iIVJN0Yz1Y0" data-toggle="modal" data-target="#trailer">Watch Video</div></th></tr>
+</table>
+</div>
+</body>
+</html>
